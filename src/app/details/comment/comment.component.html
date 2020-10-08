@@ -1,0 +1,17 @@
+<div class="border">
+<div class="comment" *ngFor="let comment of comments; let i = index" >
+
+    <div>
+        <img src={{imagePath}} alt="Image">
+    </div>
+
+    <div>
+        <p><b>{{comment.name}} </b><span>  {{comment.time}}</span></p>
+    </div>
+
+    <div>
+        {{comment.message}}
+    </div>
+</div>
+
+</div>

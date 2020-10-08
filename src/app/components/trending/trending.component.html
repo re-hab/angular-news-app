@@ -1,0 +1,18 @@
+<section class="trend">
+    <header class="header">
+        <h1>{{'Trending'}}</h1>
+    </header>
+</section>
+
+    <div class="wrapper">
+        <div class="post" *ngFor="let post of posts; let i = index" (click)="constants.showDetails(post)">
+            <img [src]="post.urlToImage" alt="Image" *ngIf="i < 4">
+            <p class="time"> {{formatPublishedDate(post.publishedAt)}}</p>
+            <p class="desc">
+                {{post.description}}
+            </p>
+            <!-- <hr> -->
+        </div>
+      
+      </div>
+

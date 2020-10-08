@@ -1,0 +1,12 @@
+<section class="follow-us border">
+    <header class="header light">
+        <h1>{{'Follow Us'}}</h1>
+    </header>
+    <ul>
+        <li *ngFor="let button of socialMediaButtons">
+          <button [style.backgroundColor]="button.bgColor" mat-button class="contact-btn">
+            <i [ngClass]="button.class"></i>
+          </button>
+        </li>
+      </ul>
+</section>

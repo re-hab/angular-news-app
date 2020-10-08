@@ -1,0 +1,17 @@
+<section class="editors">
+    <header class="header light">
+        <h1>{{'Editors Pickes'}}</h1>
+    </header>
+
+    <div class="row" *ngFor="let post of posts; let i = index" (click)="constants.showDetails(post)">
+
+        <div class="column1">
+            <img [src]="post.urlToImage" alt="Image">
+        </div>
+        <div class="column2">
+            <p>{{post.description}}</p><span class="more" (click)="constants.showDetails(post)"><b> Click to see more</b></span>
+            <p class="published"> By <span class="auth">{{post.author || 'Micky Tyson'}}</span><span> - {{formatPublishedDate(post.publishedAt)}}</span></p>
+        </div>
+    
+    </div>
+</section>

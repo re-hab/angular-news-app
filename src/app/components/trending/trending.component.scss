@@ -1,0 +1,77 @@
+@import '../../defines/constantsStyles.scss';
+
+//mobile
+@media only screen and (max-width: 800px) {
+
+  .trend {
+    padding: 10px 15px;
+    margin-left: 20px;
+
+  h1 {
+    margin-left: -10px;
+  }
+  }
+    .wrapper {
+            display: grid;
+            width: auto;
+        
+        .post {
+              margin: 0px 20px 0px 20px;
+              padding-bottom: 15px;
+              border-bottom: 1px solid #dee2e6;
+            }
+        img {
+            display: none;
+        }
+    
+        .time {
+            color: $light-gray;
+            margin-top: 20px;
+        }
+      }
+    
+
+
+
+   }
+
+   //pc
+  @media only screen and (min-width: 800px) {
+    .trend {
+      padding: 15px 15px;
+      //margin:  20px 20px 20px 0px;
+  
+    h1 {
+      margin-left: 15px;
+    }
+  
+  
+  }
+.wrapper {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 15px;
+
+
+    img {
+        width: auto;
+        height: 100px;
+    }
+
+    .time {
+        color: $light-gray;
+        margin-top: 20px;
+    }
+
+    .post {
+      height: auto;
+      .desc {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #dee2e6;
+      }
+      p {
+      width: 170px;
+      }
+    }
+  }
+}

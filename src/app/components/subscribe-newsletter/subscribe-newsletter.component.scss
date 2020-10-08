@@ -1,0 +1,53 @@
+@import '../../defines/constantsStyles.scss';
+
+
+//mobiles
+@media only screen and (max-width: 800px) {
+    .subscribe-newsLetter {
+        padding: 10px 15px;
+        margin: 20px;
+    }
+}
+
+//pc
+@media only screen and (min-width: 800px) {
+
+    .subscribe-newsLetter {
+        padding: 15px 15px;
+        margin:  20px 20px 20px 0px;  
+    }
+
+}
+.subscribe-newsLetter {
+   // margin: 20px 0;
+
+   h1 {
+    color: $base-color;
+ }
+
+ p {
+    color: black;
+    font-size: 15px;
+    margin: 20px 0;
+}
+    .form-group {
+        display: flex;
+        justify-content: center;
+    }
+
+    input {
+        width: 65%;
+        border-radius: 3px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        background-color: $base-color;
+        color: $white-color;
+    }
+
+   
+}

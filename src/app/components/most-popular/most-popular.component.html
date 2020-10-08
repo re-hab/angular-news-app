@@ -1,0 +1,20 @@
+<section class="most-popular border">
+    <header class="header light">
+        <h1>{{'5 Most Popular'}}</h1>
+    </header>
+
+    <div class="posts" (click)="constants.showDetails(post)" *ngFor="let post of posts; let i = index">
+
+            <div class="column1">
+                <span class="num">{{i + 1}}</span>
+            </div>
+
+            <div class="column2">
+                <span class="desc">
+                    {{post.description}}
+                </span>
+            </div> <span class="more" (click)="constants.showDetails(post)"><b> Click to see more</b></span>
+
+        </div>
+
+</section>

@@ -1,0 +1,79 @@
+@import '../../defines/constantsStyles.scss';
+
+
+//mobiles
+@media only screen and (max-width: 800px) {
+ 
+  #main {
+    display: grid;
+    //grid-gap: 10px;
+    //grid-column: 1/2 ;
+    grid-template-areas: 
+    "news"
+    "side"
+    "picks"
+    "trending";
+  }
+
+  #side-col {
+    width: 320px;
+    margin: auto;
+  }
+
+  #news {
+    margin: auto;
+  }
+
+  #trending {
+    border-top: 1px solid #dee2e6;
+    grid-area: trending;
+    //padding-top: 30px;
+  }
+}
+
+//pc
+@media only screen and (min-width: 800px) {
+  #main {
+
+    margin: 0px 90px 0px 60px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "news side"
+    "picks side"
+    "trending trending";
+  }
+
+  #trending {  
+    border-top: 4px solid $light-gray;
+  }
+}
+
+
+header {
+  h1 {
+   // font-family: "Lucida Console", Monaco, monospace;
+    text-align: center;
+    font-size: 27px;
+    margin: 10px;
+  }
+}
+
+
+#news {
+  grid-area: news;
+}
+
+#side-col {
+  grid-area: side;
+}
+
+#editor-picks {
+  grid-area: picks;
+}
+
+#trending {
+  grid-area: trending;
+  //padding-top: 30px;
+}

@@ -1,0 +1,58 @@
+@import '../../../app/defines/constantsStyles.scss';
+
+//mobiles
+@media only screen and (max-width: 800px) {
+
+    .follow-us {
+        padding: 10px 10px 10px 0px;
+        margin: 20px;
+
+        button {
+            margin: 10px;
+        }
+    }
+
+}
+
+//pc
+@media only screen and (min-width: 800px) {
+
+    .follow-us {
+        padding:15px 15px 15px 0px;
+        margin:  20px 20px 20px 0px;
+
+        ul {
+            display: flex;
+        }
+    }
+
+
+}
+.follow-us {
+
+   h1 {
+     margin-left: 30px;
+   }
+
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+
+  ul {
+    
+    li {
+        display: inline;
+        margin-right: 5px;
+
+        .contact-btn {
+            min-width: 45px;
+            min-height: 45px;
+            color: white;
+            padding: 0;
+            font-size: 20px;
+        }
+    }
+}
+}

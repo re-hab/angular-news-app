@@ -1,0 +1,118 @@
+@import '../../../app/defines/constantsStyles.scss';
+
+//mobile
+@media only screen and (max-width: 800px) {
+  .editors {
+    padding: 10px 15px;
+    margin: 20px;
+  }
+  h1 {
+    margin-left: -10px;
+  }
+
+  .column1 {
+    float: left;
+    width: 10%;
+    padding: 5px;
+  }
+ .column2 {
+    float: left;
+    width: 53%;
+    padding: 5px;
+    margin-left: 102px;
+    margin-top: 16px;
+
+    p:first-child {
+      white-space: nowrap;
+      width: 172px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+    }
+
+    // white-space: nowrap;
+    // width: 100px;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+
+    .published {
+      margin-top: 10px;
+    }
+  }
+
+}
+
+
+//pc
+@media only screen and (min-width: 800px) {
+
+  .editors {
+    padding: 15px 15px;
+    margin:  20px 20px 20px 0px;
+
+
+  h1 {
+    margin-left: 15px;
+  }
+
+    .row {
+      height: 100%;
+      margin: 10px;
+      padding-bottom: 10px;
+
+      .more {
+        display: none;
+      }
+      
+    }
+
+    .column1 {
+      float: left;
+      width: 110px;
+    }
+   .column2 {
+    float: left;
+    width: 400px;
+    padding: 5px;
+    margin-left: 22px;
+
+    }
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+
+      p {
+         width: 154px;
+      }
+     
+    }
+
+   
+  }
+}
+
+.editors {
+  img {
+    width: 110px;
+    height: 110px;
+    margin-right:15px;
+    float: left;
+    margin-top: 10px;
+}
+
+  .row {
+    border-bottom: 1px solid #dee2e6;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+    .auth {
+      color: $base-color;
+      }
+      
+    .published {
+    color: grey;
+    }
+}

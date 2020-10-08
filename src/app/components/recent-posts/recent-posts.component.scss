@@ -1,0 +1,149 @@
+@import '../../../app/defines/constantsStyles.scss';
+
+//mobile
+@media only screen and (max-width: 800px) {
+
+   .recent-posts {
+
+      padding: 10px 15px;
+      margin: 20px;
+
+      h1 {
+         margin-left: 15px;
+      }
+
+      .posts {
+         direction: ltr;
+         min-height: 100%;
+         overflow-y: scroll;
+         height: 100px;
+         margin-top: 10px;
+         margin-bottom: 10px;
+         border-bottom: inherit;
+      }
+
+
+   img {
+      width:60px;
+      height:60px;
+      margin-right:15px;
+      float: left;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+  }
+
+      .column1 {
+         float: left;
+         width: 33%;
+         padding: 5px;
+       }
+      .column2 {
+         float: left;
+         width: 150px;
+         padding: 5px;
+       }
+       
+       /* Clearfix (clear floats) */
+       .postContent::after {
+         content: "";
+         clear: both;
+         display: table;
+
+         p {
+            width: 154px;
+         }
+        
+       }
+
+       .postContent {
+         margin: 10px;
+       }
+
+       .published {
+         color: grey;
+         display: contents;
+      }
+   
+   }
+
+}
+
+//pc
+@media only screen and (min-width: 800px) {
+
+   .recent-posts {
+
+      padding: 15px 15px;
+      margin:  20px 20px 20px 0px;
+
+      .posts {
+         height: 100%;
+         border-bottom: inherit;
+
+         .postContent {
+            min-height: 60px;
+            margin-top: 10px;
+        }
+   
+           .tp-card {
+            width: 110px;
+            // height: 84px;
+             height: 55px;
+         }
+  
+      }
+
+
+
+   img {
+      width:105px;
+      height:105px;
+      margin-right:15px;
+      float: left;
+  }
+
+      .column1 {
+         float: left;
+         width: 33%;
+         padding: 5px;
+       }
+      .column2 {
+         float: left;
+         width: 190px;
+         padding: 5px;
+         margin-left: 10px;
+       }
+       
+       /* Clearfix (clear floats) */
+       .postContent::after {
+         content: "";
+         clear: both;
+         display: table;
+
+         p {
+            width: 154px;
+         }
+        
+       }
+      
+
+      
+   .published {
+      color: grey;
+      display: contents;
+   }
+   }
+
+}
+.recent-posts {
+
+   h1 {
+      color: $base-color;
+   }
+
+
+.posts:last-child {
+   border-bottom: none;
+}
+}

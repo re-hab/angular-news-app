@@ -1,0 +1,18 @@
+@import '../../../app/defines/constantsStyles.scss';
+.not-found {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 80px;
+        color: $base-color;
+        margin-bottom: 30px;
+    }
+
+    p {
+        color: black;
+        margin-bottom: 10px;
+    }
+}

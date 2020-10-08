@@ -1,0 +1,60 @@
+<form name="form" #addCommentForm="ngForm" (ngSubmit)="onSubmit(addCommentForm)" novalidate class="form-horizontal">
+    <div class="box-body">
+        <div class="form-group has-feedback "
+            [ngClass]="{'has-error':name.errors && (!name.pristine || addCommentForm.submitted)}">
+            <input [(ngModel)]="user_name" 
+            (ngModelChange)="resetShowError()"
+            placeholder='Name' 
+            #name="ngModel" 
+            ngControl="name"
+            name="userName" 
+            type="text"
+            required />
+            <div [hidden]="name.valid || (name.pristine && !addCommentForm.submitted)"
+                class="validation-error"
+                > Name can not be empty
+            </div>
+        </div>
+
+
+    <div class="form-group has-feedback"
+        [ngClass]="{'has-error':mail.errors && (!mail.pristine || addCommentForm.submitted)}">
+        <input [(ngModel)]="user_email"
+        (ngModelChange)="resetShowError()" 
+        placeholder='Email' 
+        #mail="ngModel" 
+        ngControl="email"
+        name="userEmail" 
+        type="text"
+        pattern ="[a-zA-Z0-9.-]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
+        required />
+        
+        <small class="col-md-2 note"><i>Will not be published</i></small>
+        <div [hidden]="mail.valid || (mail.pristine && !addCommentForm.submitted)"
+            class="validation-error"
+            > Email not valid
+        </div>
+    </div>
+
+     <div class="form-group has-feedback"
+             [ngClass]="{'has-error':meassge.errors && (!meassge.pristine || addCommentForm.submitted)}">
+            <textarea [(ngModel)]="user_message" 
+            (ngModelChange)="resetShowError()"
+            placeholder='Message' 
+            #meassge="ngModel" 
+            ngControl="meassge"
+            name="meassge" 
+            type="text"
+            required ></textarea>
+            <div [hidden]="meassge.valid || (meassge.pristine && !addCommentForm.submitted)"
+                class="validation-error"
+                > Message cant non be empty
+           </div>
+    </div>
+
+    </div>
+
+    <div class="box-footer">
+        <button type="submit" mat-stroked-button>Send</button>
+        <div [hidden]="!showError" class="validation-error" >{{errorMessage}}</div>
+    </div>

@@ -1,0 +1,28 @@
+<main>
+    <div *ngFor="let post of posts; let i = index" class="news" (click)="constants.showDetails(post)">
+        <img [src]="post.urlToImage" alt="Image">
+
+        <p class="type">
+            <span *ngIf=" i ==0 ">MUSTREADS</span>
+            <span *ngIf=" i ==1 ">TECH</span>
+            <span *ngIf=" i ==2 ">SOCIAL MEDIA</span>
+        </p>
+
+        <h2 *ngIf=" i ==0 " class="title"><b> {{post.title}} </b></h2>
+
+        <p>{{post.description}}</p>
+
+        <div [ngClass]="{'auth' : i ==0 }">
+            <p *ngIf=" i ==0 "> By <span> {{post.author || 'Micky Tyson'}} </span></p>
+
+            <mat-card>
+                <i class="fas fa-share"></i>
+                <span>{{ shares }}</span>
+                <i class="far fa-comment"></i>
+                <span> {{ comments }}</span>
+            </mat-card>
+
+        </div>
+
+    </div>
+</main>

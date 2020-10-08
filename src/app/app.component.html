@@ -1,0 +1,24 @@
+<header>
+  <mat-toolbar>
+    <a routerLink="/"  class="gap">
+      <span id="span1">News</span>
+      <span id="span2">App.</span>
+    </a>
+
+    <!-- <span class = "filler"></span> -->
+
+    <button (click)="openSite()" mat-stroked-button>
+      Visit Our Website
+    </button>
+  </mat-toolbar>
+</header>
+
+<section class="content">
+  <router-outlet></router-outlet>
+</section>
+
+<div class="card-footer text-muted">
+  <p>
+    &#169; <a (click)="openSite()">2020 Angular News App.</a>
+  </p>
+</div>

@@ -1,0 +1,24 @@
+<section class="recent-posts border">
+    <header class="header light">
+        <h1>{{'Recent Posts'}}</h1>
+    </header>
+
+    <div class="posts" *ngFor="let post of posts; let i = index" (click)="constants.showDetails(post)" >
+
+        <div class="postContent">
+
+        <div class="column1">
+            <img [src]="post.urlToImage" alt="Image">
+        </div>
+
+        <div class="column2">
+                <p>
+                    {{post.description}}
+                </p>
+            <span class="published">{{ formatPublishedDate(post.publishedAt)}}</span>
+        </div>
+
+        </div>
+
+    </div>
+</section>

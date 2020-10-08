@@ -1,0 +1,14 @@
+<header>
+    <h1 class="title"><b>Latest News</b></h1>
+</header>
+<div id="main">
+  <div id="side-col">
+    <app-recent-posts [posts]="recentPosts"></app-recent-posts>
+    <app-most-popular [posts]="mostPopular"></app-most-popular>
+    <app-subscribe-newsletter></app-subscribe-newsletter>
+    <app-following></app-following>
+  </div>
+    <app-public-news [posts]="publicNews" id="news"></app-public-news>
+    <app-editors-picks [posts]="editorsPicks" id="editor-picks"></app-editors-picks>
+    <app-trending [posts]="trendAcrticles"  id="trending"></app-trending>
+</div>

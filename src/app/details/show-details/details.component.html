@@ -1,0 +1,43 @@
+<div class="item-details">
+
+    <div>
+        <h2><b> {{newsItem.title}} </b></h2>
+        <p> By <span> {{newsItem.author || 'Micky Tyson'}} </span> Published on {{formatPublishedDate(newsItem.publishedAt)}}</p>
+    </div>
+
+    <div>
+        <ul class="border">
+            <li id="shares">
+                <span id="number" class="bold">23</span>
+                <span>Shares</span>
+            </li>
+            <li *ngFor="let link of socialMediaIcons">
+                <i [ngClass]="link.class"></i>
+                <span>{{ link.name }}</span>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <img [src]="newsItem.urlToImage" alt="Image">
+        <p>{{newsItem.content}}</p>
+
+
+        <button class="upVote" mat-stroked-button>
+            <i class="fas fa-thumbs-up"></i>
+            I found this helpful
+          </button>
+          <button class="downVote" mat-stroked-button>
+            <i  class="fas fa-thumbs-down"></i>
+            I did not find this helpful
+          </button>
+
+          <h3>Comments</h3>
+
+          <app-comment class="comments" [comments]="comments"></app-comment>
+
+          <h3>Join the Conversation</h3>
+          <app-add-comment (onAddComment)="addComment($event)"></app-add-comment>
+    </div>
+
+</div>
